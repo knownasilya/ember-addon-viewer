@@ -1,9 +1,27 @@
 .av-container {
   font-family: system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   overflow-y: auto;
-  height: 100%;
-  width: 100%;
   padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.av-search-container {
+  padding: 1rem 0;
+  display: flex;
+}
+
+.av-search-container input {
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background-color: #f1f5f8;
+  padding: 0.5rem 1rem;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
 }
 
 .av-card-grid {
@@ -31,7 +49,8 @@
   color: #5661b3;
 }
 
-.av-description {
+.av-description,
+.av-summary {
   margin-top: 0.8rem;
   font-size: 0.9rem;
   color: #70748a;

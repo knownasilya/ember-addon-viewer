@@ -1,6 +1,15 @@
 <div class='av-container'>
+  <div class='av-search-container'>
+    <input type='text' placeholder='Search by name' oninput={{action 'filter' value='target.value'}}>
+  </div>
+
+  <div class='av-summary'>
+    Showing {{this.filteredAddons.length}} of {{this.addons.length}} addons.<br>
+    By {{this.uniqueAuthors.length}} unique authors.
+  </div>
+
   <ul class='av-card-grid'>
-    {{#each this.addons as |addon|}}
+    {{#each this.filteredAddons as |addon|}}
       <li class='av-card'>
         <div class='av-title'>
           {{addon.name}}
