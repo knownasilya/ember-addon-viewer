@@ -1,5 +1,9 @@
 .av-container {
   font-family: system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
 }
 
 .av-card-grid {
