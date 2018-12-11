@@ -21,7 +21,12 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.16.0"
+    "broccoli-debug": "^0.6.5",
+    "broccoli-file-creator": "^2.1.1",
+    "broccoli-funnel": "^2.0.1",
+    "broccoli-merge-trees": "^3.0.2",
+    "ember-cli-babel": "^6.16.0",
+    "find-root": "^1.1.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
@@ -40,6 +45,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-power-select": "^2.2.1",
     "ember-qunit": "^3.4.1",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.5.1",
