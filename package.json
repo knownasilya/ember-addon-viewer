@@ -1,6 +1,6 @@
 {
   "name": "ember-addon-viewer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "View information about addons used in your app (and more).",
   "keywords": [
     "ember-addon",
