@@ -3,6 +3,8 @@ ember-addon-viewer
 
 View information about addons used in your app.
 
+![Screenshot of demo](screenshot.png);
+
 Demo here: https://ember-addon-viewer.netlify.com/addon-viewer
 
 Installation
