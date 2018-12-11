@@ -23,9 +23,12 @@ module.exports = {
   treeForApp(tree) {
     let appTree = this._super(tree);
 
-    if (!this._shouldIncludeViewer()) {
+    if (this._shouldIncludeViewer()) {
       appTree = new Funnel(appTree, {
-        exclude: ['**/instance-initializers/ember-addon-viewer.js'],
+        include: [
+          '**/instance-initializers/ember-addon-viewer.js',
+          '**/application-addon-viewer/**/*'
+        ]
       });
 
       let dataTree = this._generateDataTree();
