@@ -32,6 +32,24 @@
   list-style: none;
 }
 
+@media (max-width: 400px) {
+  .av-card-grid {
+    grid-template-columns: 1fr;
+  }
+} 
+
+@media (min-width: 401px) and (max-width: 550px) {
+  .av-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+} 
+
+@media (min-width: 1000px) {
+  .av-card-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+} 
+
 .av-card {
   display: flex;
   flex-direction: column;
