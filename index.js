@@ -7,7 +7,7 @@ const Funnel = require('broccoli-funnel');
 const debugTree = require('broccoli-debug').buildDebugCallback(`ember-addon-viewer:${this.name}`);
 const writeFile = require('broccoli-file-creator');
 const BroccoliMergeTrees = require('broccoli-merge-trees');
-const defaultAddons = ['ember-cli-babel', '@ember/optional-features', 'broccoli-asset-rev', 'ember-ajax', 'ember-cli-dependency-checker', 'ember-cli-eslint', 'ember-cli-htmlbars', 'ember-cli-htmlbars-inline-precompile', 'ember-cli-inject-live-reload', 'ember-cli-sri', 'ember-cli-template-lint', 'ember-cli-uglify', 'ember-disable-prototype-extensions', 'ember-export-application-global', 'ember-load-initializers', 'ember-maybe-import-regenerator', 'ember-qunit', 'ember-resolver', 'ember-source', 'ember-try', 'loader.js', 'qunit-dom'];
+const defaultAddons = ['@ember/jquery', 'ember-cli-babel', '@ember/optional-features', 'broccoli-asset-rev', 'ember-ajax', 'ember-cli-dependency-checker', 'ember-cli-eslint', 'ember-cli-htmlbars', 'ember-cli-htmlbars-inline-precompile', 'ember-cli-inject-live-reload', 'ember-cli-sri', 'ember-cli-template-lint', 'ember-cli-uglify', 'ember-disable-prototype-extensions', 'ember-export-application-global', 'ember-load-initializers', 'ember-maybe-import-regenerator', 'ember-qunit', 'ember-resolver', 'ember-source', 'ember-try', 'loader.js', 'qunit-dom'];
 
 module.exports = {
   name: require('./package').name,
