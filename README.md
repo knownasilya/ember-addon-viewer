@@ -1,24 +1,25 @@
 ember-addon-viewer
-==============================================================================
+==================
 
-[Short description of the addon.]
+View information about addons used in your app.
+
+Demo here: https://ember-addon-viewer.netlify.com/addon-viewer
 
 Installation
-------------------------------------------------------------------------------
+------------
 
-```
+```sh
 ember install ember-addon-viewer
 ```
 
-
 Usage
-------------------------------------------------------------------------------
+-----
 
-[Longer description of how to use the addon in apps.]
-
+Install this addon and visit `/addon-viewer` to see the UI.
+This addon is not included in production builds.
 
 Contributing
-------------------------------------------------------------------------------
+------------
 
 ### Installation
 
