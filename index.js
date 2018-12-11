@@ -53,16 +53,25 @@ module.exports = {
     let devDeps = Object.keys(packageJson.devDependencies) || [];
     let libraries = deps.concat(devDeps);
     let addonPackages = libraries.map((key) => {
-      let libPath = require.resolve(key);
-      let rootPath = findRoot(libPath);
-      let pkgBuffer = fs.readFileSync(path.join(rootPath, 'package.json'));
-      let pkg = JSON.parse(pkgBuffer.toString());
-      return pkg;
+      try {
+        let libPath = require.resolve(key);
+        let rootPath = findRoot(libPath);
+        let pkgBuffer = fs.readFileSync(path.join(rootPath, 'package.json'));
+        let pkg = JSON.parse(pkgBuffer.toString());
+        return pkg;
+      } catch(err) {
+        // ignore
+        return;
+      }
     }).filter((pkg) => {
-      let isAddon = pkg && pkg.keywords && pkg.keywords.includes('ember-addon');
-      let notDefaultAddon = !defaultAddons.includes(pkg.name);
-      
-      return isAddon && notDefaultAddon;
+      if (pkg) {
+        let isAddon = pkg.keywords && pkg.keywords.includes('ember-addon');
+        let notDefaultAddon = !defaultAddons.includes(pkg.name);
+        
+        return isAddon && notDefaultAddon;
+      }
+
+      return false;
     }).map((pkg) => {
       return {
         name: pkg.name,
