@@ -1,0 +1,25 @@
+<div class='av-container'>
+  <ul class='av-card-grid'>
+    {{#each this.data as |addon|}}
+      <li class='av-card'>
+        <div class='av-title'>
+          {{addon.name}}
+        </div>
+        <div class='av-description'>
+          {{addon.description}}
+        </div>
+        
+
+        <div class='av-card-bottom'>
+          <div class='av-author'>
+            {{addon.author}}
+          </div>
+          <div class='av-expander'></div>
+          <div class='av-version'>
+            v{{addon.version}}
+          </div>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>

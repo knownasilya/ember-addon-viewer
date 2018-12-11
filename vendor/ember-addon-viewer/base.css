@@ -11,7 +11,6 @@
 }
 
 .av-card {
-  color: #5661b3;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 2px 4px 0 rgba(0,0,0,.08);
   padding: 1rem;
   border-radius: .25rem;
@@ -20,4 +19,26 @@
 
 .av-card:hover {
   box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+}
+
+.av-title {
+  color: #5661b3;
+}
+
+.av-description {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #70748a;
+}
+
+.av-card-bottom {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #70748a;
+}
+
+.av-expander {
+  flex: 1;
 }

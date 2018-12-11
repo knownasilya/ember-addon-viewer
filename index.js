@@ -14,7 +14,10 @@ module.exports = {
 
   included() {
     this._super.included.apply(this, arguments);
-    this.import('vendor/ember-addon-viewer/base.css');
+    
+    if (this._shouldIncludeViewer()) {
+      this.import('vendor/ember-addon-viewer/base.css');
+    }
   },
 
   treeForApp(tree) {
@@ -24,12 +27,14 @@ module.exports = {
       appTree = new Funnel(appTree, {
         exclude: ['**/instance-initializers/ember-addon-viewer.js'],
       });
+
+      let dataTree = this._generateDataTree();
+      let newTree = new BroccoliMergeTrees([appTree, dataTree]);
+  
+      return debugTree(newTree, 'tree-for-app');
     }
 
-    let dataTree = this._generateDataTree();
-    let newTree = new BroccoliMergeTrees([appTree, dataTree]);
-
-    return debugTree(newTree, 'tree-for-app');
+    return appTree;
   },
 
   _shouldIncludeViewer() {
