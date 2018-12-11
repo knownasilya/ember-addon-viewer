@@ -1,13 +1,15 @@
 {
   "name": "ember-addon-viewer",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "View information about addons used in your app (and more).",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "addon viewer",
+    "developer tool"
   ],
-  "repository": "",
+  "repository": "https://github.com/knownasilya/ember-addon-viewer",
   "license": "MIT",
-  "author": "",
+  "author": "Ilya Radchenko",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -18,7 +20,8 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "test:all": "ember try:each"
+    "test:all": "ember try:each",
+    "release": "standard-version"
   },
   "dependencies": {
     "broccoli-debug": "^0.6.5",
@@ -31,7 +34,6 @@
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
     "broccoli-asset-rev": "^2.7.0",
-    "ember-ajax": "^3.1.0",
     "ember-cli": "~3.5.1",
     "ember-cli-dependency-checker": "^3.0.0",
     "ember-cli-eslint": "^4.2.3",
@@ -55,12 +57,14 @@
     "eslint-plugin-ember": "^5.2.0",
     "eslint-plugin-node": "^7.0.1",
     "loader.js": "^4.7.0",
-    "qunit-dom": "^0.8.0"
+    "qunit-dom": "^0.8.0",
+    "standard-version": "^4.4.0"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "https://ember-addon-viewer.netlify.com/"
   }
 }
