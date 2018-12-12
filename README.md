@@ -20,6 +20,19 @@ Usage
 Install this addon and visit `/addon-viewer` to see the UI.
 This addon is not included in production builds.
 
+### Configuration
+
+By default the viewer is included if not building for production, but you
+can override that by setting the following configuration in `config/environment.js`.
+
+```js
+ENV['ember-addon-viewer'] = {
+  shouldIncludeViewer: true
+};
+```
+
+
+
 Contributing
 ------------
 
