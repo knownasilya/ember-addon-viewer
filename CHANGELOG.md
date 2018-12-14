@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.4"></a>
+## [0.2.4](https://github.com/knownasilya/ember-addon-viewer/compare/v0.2.3...v0.2.4) (2018-12-14)
+
+
+### Bug Fixes
+
+* use correct addon author name value ([189f065](https://github.com/knownasilya/ember-addon-viewer/commit/189f065))
+
+
+
 <a name="0.2.3"></a>
 ## [0.2.3](https://github.com/knownasilya/ember-addon-viewer/compare/v0.2.2...v0.2.3) (2018-12-14)
 
