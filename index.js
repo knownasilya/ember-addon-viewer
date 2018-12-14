@@ -51,7 +51,9 @@ module.exports = {
     let packageJson = JSON.parse(rawPkg.toString());
     let deps = Object.keys(packageJson.dependencies) || [];
     let devDeps = Object.keys(packageJson.devDependencies) || [];
-    let libraries = deps.concat(devDeps);
+    let libraries = deps.concat(devDeps).filter((name) => {
+      return !defaultAddons.includes(name);
+    });
     let addonPackages = libraries.map((key) => {
       try {
         let libPath = require.resolve(key);
@@ -65,10 +67,7 @@ module.exports = {
       }
     }).filter((pkg) => {
       if (pkg) {
-        let isAddon = pkg.keywords && pkg.keywords.includes('ember-addon');
-        let notDefaultAddon = !defaultAddons.includes(pkg.name);
-        
-        return isAddon && notDefaultAddon;
+        return pkg.keywords && pkg.keywords.includes('ember-addon');
       }
 
       return false;
@@ -79,8 +78,8 @@ module.exports = {
         version: pkg.version,
         repository: pkg.repository && pkg.repository.url,
         homepage: pkg.homepage,
-        issues: pkg.bugs && pkg.bugs.url,
-        author: pkg.author && pkg.author.name,
+        issues: pkg.bugs,
+        author: pkg.author,
         config: pkg['ember-addon']
       }
     });
